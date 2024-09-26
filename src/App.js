@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import ScrollToTop from './scrollToTop'
+import Header from './Header'
 import './App.css';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           <li onClick={() => scrollToSection(projects)} className='link'>Projects</li>
           <li onClick={() => scrollToSection(contacts)} className='link'>Contact Me</li>
         </ul>
+        <Header />
+        <h1>Lily Burton</h1>
+        <h2>Junior Front-End Developer</h2>
       </div>
       <div ref={aboutMe} className='aboutMe'>
         <h3>About Me</h3>
