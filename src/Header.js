@@ -1,10 +1,10 @@
 import React from 'react'
-import myImage from './components/My ProfilePic.jpeg'
 
 const Header = () => {
     return (
-        <div className='image-container'>
-            <img src={myImage} alt="My Profile Pic" />
+        <div className='text-container'>
+          <h1>Lily Burton</h1>
+          <h2>Junior Front-End | Full-Stack Developer</h2>
         </div>
     )
 }

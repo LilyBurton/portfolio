@@ -4,7 +4,6 @@
 
 .main {
   height: 800px;
-  background-color: aqua;
 }
 
 .aboutMe {
@@ -47,21 +46,17 @@
   cursor: pointer;
 }
 
-.image-container {
+.text-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 50vh;
-}
-
-img {
-  border-radius: 50%;
-  width: 20%;
+  flex: 1;
+  text-align: center;
 }
 
 h1 {
   font-family: 'Book Antiqua';
-  font-size: 80px; 
+  font-size: 100px; 
 }
 
 h2 {
