@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import ScrollToTop from './scrollToTop'
 import Header from './Header';
 import Nav from './nav';
+import AboutMe from './AboutMe'
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       </div>
       <div ref={aboutMe} className='aboutMe'>
         <h3>About Me</h3>
+        <AboutMe />
       </div>
       <div ref={projects} className='projects'>
         <h3>Projects</h3>
