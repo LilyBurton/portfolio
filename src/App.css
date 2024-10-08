@@ -83,3 +83,18 @@ h2 {
   font-size: 25px;
 }
 
+.project-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 50px;
+}
+
+.grocery-screenshot {
+  width: 25%;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.grocery-screenshot:hover {
+  transform: scale(1.2);
+}
