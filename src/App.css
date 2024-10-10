@@ -85,18 +85,28 @@ h2 {
 
 .project-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around; /* Equal spacing between items and edges */
   padding: 20px 50px;
+  gap: 10px; /* Optional, for additional space */
 }
 
-.grocery-screenshot {
-  width: 25%;
+.grocery-screenshot:hover, .kanban-screenshot:hover, .flavour-finder-screenshot:hover {
+  transform: scale(1.2);
+}
+
+.kanban-screenshot, .flavour-finder-screenshot, .grocery-screenshot {
+  width: 30%;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
   transition: transform .2s;
   border-radius: 10%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  object-fit: cover;
 }
 
-.grocery-screenshot:hover {
-  transform: scale(1.2);
+.video-container, .kanban-video-container, .flavour-finder-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

@@ -1,9 +1,9 @@
 import { useRef } from 'react';
-import ScrollToTop from './scrollToTop'
+import ScrollToTop from './scrollToTop';
 import Header from './Header';
 import Nav from './nav';
-import AboutMe from './AboutMe'
-import Projects from './Projects'
+import AboutMe from './AboutMe';
+import Projects from './Projects';
 import './App.css';
 
 function App() {
@@ -15,13 +15,19 @@ function App() {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: 'smooth'
-    })
-  }
+    });
+  };
+
   return (
     <div className="App">
       <ScrollToTop />
       <div className='main'>
-        <Nav />
+        <Nav 
+          scrollToSection={scrollToSection} 
+          aboutMeRef={aboutMe} 
+          projectsRef={projects} 
+          contactsRef={contacts} 
+        />
         <Header />
       </div>
       <div ref={aboutMe} className='aboutMe'>
@@ -40,3 +46,4 @@ function App() {
 }
 
 export default App;
+
