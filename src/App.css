@@ -85,16 +85,24 @@ h2 {
 
 .project-container {
   display: flex;
-  justify-content: space-around; /* Equal spacing between items and edges */
+  flex-direction: column; /* Stack top and bottom sections vertically */
+  align-items: center;
   padding: 20px 50px;
-  gap: 10px; /* Optional, for additional space */
+  gap: 40px; /* Space between top and bottom projects */
 }
 
-.grocery-screenshot:hover, .kanban-screenshot:hover, .flavour-finder-screenshot:hover {
-  transform: scale(1.2);
+.top-projects, .bottom-projects {
+  display: flex;
+  gap: 20px; /* Adjust the space between screenshots */
+  flex-wrap: wrap;
+  justify-content: space-around; /* Evenly space items */
 }
 
-.kanban-screenshot, .flavour-finder-screenshot, .grocery-screenshot {
+.bottom-projects {
+  margin-top: 40px; /* Add space above the bottom projects */
+}
+
+.grocery-screenshot, .kanban-screenshot, .flavour-finder-screenshot, .react-blog-screenshot {
   width: 30%;
   aspect-ratio: 16 / 9;
   cursor: pointer;
@@ -104,9 +112,15 @@ h2 {
   object-fit: cover;
 }
 
-.video-container, .kanban-video-container, .flavour-finder-video {
+.grocery-screenshot:hover, .kanban-screenshot:hover, .flavour-finder-screenshot:hover, .react-blog-screenshot:hover {
+  transform: scale(1.2);
+}
+
+.video-container, .kanban-video-container, .flavour-finder-video, .react-blog-video {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
+
+
