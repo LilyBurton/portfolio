@@ -1,24 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.main {
+.main, .aboutMe, .projects, .contacts {
+  min-height: 100vh;
   height: 800px;
-}
-
-.aboutMe {
-  height: 800px;
-  background-color: antiquewhite;
-}
-
-.projects {
-  height: 800px;
-  background-color: red;
-}
-
-.contacts {
-  height: 800px;
-  background-color: greenyellow;
+  background-color: #B9F3E4;
 }
 
 .link {
@@ -76,8 +69,7 @@ h2 {
   padding: 20px;           
   margin: 40px auto 0 40px; 
   text-align: left;         
-  line-height: 1.6;         
-  background-color: #fdf3e4; 
+  line-height: 1.6;          
   border-radius: 8px;       
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   font-size: 25px;
@@ -89,6 +81,8 @@ h2 {
   align-items: center;
   padding: 20px 50px;
   gap: 40px; /* Space between top and bottom projects */
+  position: relative; /* Enable absolute positioning within this container */
+  min-height: 85vh; /* Ensure the container takes up full height of the screen */
 }
 
 .top-projects, .bottom-projects {
@@ -96,6 +90,7 @@ h2 {
   gap: 20px; /* Adjust the space between screenshots */
   flex-wrap: wrap;
   justify-content: space-around; /* Evenly space items */
+  width: 100%; /* Ensure projects take full width of the container */
 }
 
 .bottom-projects {
@@ -118,9 +113,23 @@ h2 {
 
 .video-container, .kanban-video-container, .flavour-finder-video, .react-blog-video {
   display: flex;
+  flex-direction: column; /* Arrange video and paragraph vertically */
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 10px; /* Space between video and paragraph */
 }
+
+.click-instruction {
+  font-size: 18px;
+  position: absolute; /* Allows for precise placement */
+  bottom: 1px; /* Move closer to the bottom of the container */
+  left: 20px; /* Position on the left */
+  background-color: rgba(255, 255, 255, 0.8); /* Slight background for better visibility */
+  border-radius: 5px; /* Optional styling */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
