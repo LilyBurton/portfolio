@@ -131,11 +131,11 @@ h2 {
 }
 
 .contact {
+  background-color: #B9F3E4;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #CDFCF6;
 }
 
 form {
@@ -156,7 +156,6 @@ form .input-box {
 .input-box .field-box {
   width: 100%;
   height: 50px;
-  background: transparent;
   border: 2px solid #ddd;
   outline: none;
   border-radius: 10px;
@@ -182,6 +181,7 @@ form button {
   font-size: 16px;
   font-weight: 500px;
   margin-top: 25px;
+  transition: .5s;
 }
 
 form button:hover {
