@@ -5,6 +5,7 @@ import Nav from './nav';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Contacts from './Contacts';
+import tigerlillie from './components/tigerlillie.jpeg'
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <ScrollToTop />
       <div className='main'>
+        <img src={tigerlillie} alt='a tiger lillie' className='tiger-lillie' />
         <Nav 
           scrollToSection={scrollToSection} 
           aboutMeRef={aboutMe} 
@@ -42,6 +44,7 @@ function App() {
       <div ref={contacts} className='contacts'>
         <h3>Contacts</h3>
         <Contacts />
+        <img src={tigerlillie} alt='a tiger lillie' className='tiger-lillie01' />
       </div>
     </div>
   );

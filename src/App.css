@@ -1,7 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Pacifico&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Pacifico&family=Parisienne&family=Quicksand:wght@300..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.nav-bar {
+  display: flex; /* Use flexbox to arrange items */
+  justify-content: flex-end; /* Push items to the right */
+  align-items: center; /* Center items vertically if needed */
+  padding: 10px 30px; /* Add some padding for spacing */
+}
+
+.tiger-lillie {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 250px;
+  height: auto;
+}
+
+.tiger-lillie01 {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  width: 250px;
+  height: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .App {
@@ -10,17 +38,27 @@
 
 .main, .aboutMe, .projects, .contacts {
   min-height: 100vh;
-  height: 800px;
+  height: auto; 
   background-color: #B9F3E4;
 }
 
 .link {
   text-decoration: none;
-  display: inline;
-  padding: 20px 20px;
+  font-family: "Quicksand", sans-serif;
+  display: inline-block; 
+  padding: 10px 20px; 
   font-weight: 700;
   font-size: large;
-  cursor: pointer; 
+  cursor: pointer;
+  background-color: transparent; 
+  border: none; 
+  color: #2E8B57; 
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.link:hover {
+  color: #2E8B57;
+  transform: scale(1.1);
 }
 
 .top-btn-position {
@@ -51,46 +89,81 @@
 
 
 h1 {
-  font-family: 'Book Antiqua';
+  font-family: "Parisienne", cursive;
   font-size: 100px; 
+  color: #2E8B57; 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
 }
 
-h2 {
-  font-family: 'Book Antiqua';
+h2, h3 {
+  font-family: "Quicksand", sans-serif;
   font-size: 60px;
   padding-top: 70px;
+  color: #2E8B57; 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 30;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the start of the container */
+  margin: 40px auto; /* Centers the container */
+}
+
+.profilePic {
+  margin-left: 100px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Change to column to stack items */
+  justify-content: center;
+  align-items: center;
+  background-color: #B9F3E4;
+}
+
+.profilePic img {
+  width: 400px; 
+  height: auto; 
+}
+
+.art {
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; 
 }
 
 .about-me-section {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  
   width: 600px;             
   padding: 20px;           
-  margin: 40px auto 0 40px; 
   text-align: left;         
   line-height: 1.6;          
   border-radius: 8px;       
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  font-size: 25px;
+  font-size: 23px;
+  background-color: #CDFCF6;
 }
 
 .project-container {
   display: flex;
-  flex-direction: column; /* Stack top and bottom sections vertically */
+  flex-direction: column; 
   align-items: center;
   padding: 20px 50px;
-  gap: 40px; /* Space between top and bottom projects */
-  position: relative; /* Enable absolute positioning within this container */
-  min-height: 85vh; /* Ensure the container takes up full height of the screen */
+  gap: 40px; 
+  position: relative;
+  min-height:100vh; 
 }
 
 .top-projects, .bottom-projects {
   display: flex;
-  gap: 20px; /* Adjust the space between screenshots */
+  gap: 20px; 
   flex-wrap: wrap;
-  justify-content: space-around; /* Evenly space items */
-  width: 100%; /* Ensure projects take full width of the container */
+  justify-content: space-around; 
+  width: 100%; 
 }
 
 .bottom-projects {
@@ -122,12 +195,10 @@ h2 {
 
 .click-instruction {
   font-size: 18px;
-  position: absolute; /* Allows for precise placement */
-  bottom: 1px; /* Move closer to the bottom of the container */
-  left: 20px; /* Position on the left */
-  background-color: rgba(255, 255, 255, 0.8); /* Slight background for better visibility */
-  border-radius: 5px; /* Optional styling */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; 
 }
 
 .contact {
@@ -171,6 +242,8 @@ form .input-box {
 }
 
 form button {
+  font-family: "Quicksand", sans-serif;
+  color: #2E8B57;
   width: 100%;
   height: 55px;
   background: #B9F3E4;
@@ -178,7 +251,7 @@ form button {
   border-radius: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500px;
   margin-top: 25px;
   transition: .5s;

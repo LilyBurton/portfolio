@@ -1,32 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import { FaAngleDoubleUp } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import { FaAngleDoubleUp } from 'react-icons/fa';
 
 const ScrollToTop = () => {
-    const [scrollTop, setScrollTop] = useState(false)
+    const [scrollTop, setScrollTop] = useState(false);
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                setScrollTop(true)
-            } else {
-                setScrollTop(false)
-            }
-        })
-    }, [])
+        const handleScroll = () => {
+            setScrollTop(window.scrollY > 300);
+        };
 
-    const scrollingToTop = (elementRef) => {
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollingToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-      }
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
-      return (
+    return (
         <div>
-            {scrollTop && <FaAngleDoubleUp className='top-btn-position top-btn-styling' onClick={scrollingToTop} />}
+            {scrollTop && (
+                <FaAngleDoubleUp
+                    className='top-btn-position top-btn-styling'
+                    onClick={scrollingToTop}
+                />
+            )}
         </div>
-        
-      )
-}
+    );
+};
 
-export default ScrollToTop
+export default ScrollToTop;
