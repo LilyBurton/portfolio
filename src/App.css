@@ -42,6 +42,15 @@
   background-color: #B9F3E4;
 }
 
+.nav-bar {
+  position: fixed;   
+  top: 0;            
+  left: 0;           
+  width: 100%;       
+  z-index: 1000;     
+  padding: 10px 0;   
+}
+
 .link {
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
@@ -65,6 +74,7 @@
   position: fixed;
   bottom: 15px;
   right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 .top-btn-styling {
@@ -75,6 +85,14 @@
   background-color: #fff;
   color: #333;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+}
+
+.top-btn-styling:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .text-container {
@@ -201,14 +219,6 @@ h2, h3 {
   margin-top: 10px; 
 }
 
-.contact {
-  background-color: #B9F3E4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 form {
   max-width: 600px;
   width: 100%;
@@ -217,7 +227,8 @@ form {
   border-radius: 10%;
   box-shadow: 0 0 10px rgb(0, 0, 0, .1);
   color: #333;
-  margin: 25px;
+  margin: 25px 0; /* Adjust top and bottom margin, but set left and right to 0 */
+  margin-left: 60px; /* Add left margin to push the form more to the left */
 }
 
 form .input-box {
@@ -259,6 +270,47 @@ form button {
 
 form button:hover {
   background: #CDFCF6;
+}
+
+.contact {
+  background-color: #B9F3E4;
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Align items vertically in the center */
+  gap: 100px; /* Space between the form and the icon */
+  padding: 20px;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center; /* Center within its own space */
+  align-items: center; /* Align in the middle vertically */
+  padding: 50px;
+  margin: 0;
+}
+
+.social-links-icons {
+  display: flex; /* Ensure the icons are laid out in a row */
+  gap: 50px; /* Add a gap between the icons */
+}
+
+.social-links-icons svg {
+  cursor: pointer;
+}
+
+.github-icon {
+  color: black;
+}
+
+.linkedin-icon {
+  color: #0A66C2;
+}
+
+.github-icon:hover,
+.linkedin-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 
 

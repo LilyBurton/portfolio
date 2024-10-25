@@ -43,10 +43,13 @@ function App() {
       </div>
       <div ref={contacts} className='contacts'>
         <h3>Contacts</h3>
-        <Contacts />
+          <Contacts />
+        </div>
+        
         <img src={tigerlillie} alt='a tiger lillie' className='tiger-lillie01' />
+        
+
       </div>
-    </div>
   );
 }
 

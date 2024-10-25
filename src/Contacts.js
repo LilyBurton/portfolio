@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialLinks from './socialLinks';
 
 const Contacts = () => {
     const onSubmit = async (event) => {
@@ -22,8 +23,7 @@ const Contacts = () => {
         if (res.success) {
           console.log("Success", res);
         }
-      };
-    
+    };
 
     return (
         <div>
@@ -43,12 +43,14 @@ const Contacts = () => {
                     </div>
                     <button type="submit">Send Message</button>
                 </form>
+                <SocialLinks />
             </section>
         </div>
     );
 };
 
 export default Contacts;
+
 
 
 
