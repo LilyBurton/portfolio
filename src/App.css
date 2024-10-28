@@ -204,11 +204,11 @@ h2, h3 {
 
 .video-container, .kanban-video-container, .flavour-finder-video, .react-blog-video {
   display: flex;
-  flex-direction: column; /* Arrange video and paragraph vertically */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 10px; /* Space between video and paragraph */
+  gap: 10px; 
 }
 
 .click-instruction {
@@ -227,8 +227,8 @@ form {
   border-radius: 10%;
   box-shadow: 0 0 10px rgb(0, 0, 0, .1);
   color: #333;
-  margin: 25px 0; /* Adjust top and bottom margin, but set left and right to 0 */
-  margin-left: 60px; /* Add left margin to push the form more to the left */
+  margin: 25px 0; 
+  margin-left: 60px; 
 }
 
 form .input-box {
@@ -274,25 +274,32 @@ form button:hover {
 
 .contact {
   background-color: #B9F3E4;
-  display: flex;
-  flex-direction: row; /* Align items horizontally */
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Align items vertically in the center */
-  gap: 100px; /* Space between the form and the icon */
-  padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.social-container {
-  display: flex;
-  justify-content: center; /* Center within its own space */
-  align-items: center; /* Align in the middle vertically */
-  padding: 50px;
-  margin: 0;
+.form-container, .social-links-container {
+    flex: 1;
+    margin: 10px;
+}
+
+.form-container {
+    max-width: 40%; 
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .social-links-icons {
-  display: flex; /* Ensure the icons are laid out in a row */
-  gap: 50px; /* Add a gap between the icons */
+  display: flex; 
+  gap: 60px; 
 }
 
 .social-links-icons svg {
@@ -311,6 +318,10 @@ form button:hover {
 .linkedin-icon:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease;
+}
+
+.email-error {
+  color: #FF204E;
 }
 
 
