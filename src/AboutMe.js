@@ -1,5 +1,5 @@
 import React from 'react'
-import profilePic from './components/profilepicnobackground.png';
+import profilePic from './components/ProfilePic.jpg';
 
 const AboutMe = () => {
     return (
@@ -11,7 +11,6 @@ const AboutMe = () => {
         </div>
         <div className='profilePic'>
             <img src={profilePic} alt="a profile pic" className='profilePic' />
-            <p className='art'>Art done by Jodine Ochate</p>
         </div>
     </div>
         

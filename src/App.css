@@ -131,12 +131,13 @@ h2, h3 {
 
 .profilePic {
   margin-left: 100px;
-  margin-top: 50px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column; /* Change to column to stack items */
   justify-content: center;
   align-items: center;
   background-color: #B9F3E4;
+  border-radius: 8px;  
 }
 
 .profilePic img {
