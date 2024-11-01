@@ -108,6 +108,7 @@ const Projects = () => {
                                     Your browser does not support the video tag.
                                 </video>
                                 <p className='paragraph'>Flavour Finder is a recipe generator where the user can generate recipes through ingredients, nationality, meal type and dietary requirements. We want to make it user friendly as possible for both users and non users where they can still try out the recipes generator before signing up and when they do they will have the ability to save the recipes. We use Mongo.db to be able to save the users details in mongo.db and fetch data from the api to be able to generate different recipes. What I love about this generator is it makes the dietry mandatory. For example, if you dietary is vegan but you put milk as an ingredient it will make sure to add a vegan friendly milk within the recipe.</p>
+                                <p>Link to the Recipe Generator! <a href='https://flavour-finder.onrender.com/' target='_blank' rel="noopener noreferrer">Click here!</a></p>
                                 <p className='click-instruction'>CLICK on the video to go back</p>
                             </div>
                         )}
