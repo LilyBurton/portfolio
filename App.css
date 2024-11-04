@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Pacifico&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Pacifico&family=Parisienne&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  display: flex; /* Use flexbox to arrange items */
+  justify-content: flex-end; /* Push items to the right */
+  align-items: center; /* Center items vertically if needed */
+  padding: 10px 30px; /* Add some padding for spacing */
+}
+
+.tiger-lillie {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 250px;
+  height: auto;
+}
+
+.tiger-lillie01 {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  width: 250px;
+  height: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.App {
+  text-align: center;
+}
+
+.main, .aboutMe, .projects, .contacts {
+  min-height: 100vh;
+  height: auto; 
+  background-color: #B9F3E4;
+}
+
+.nav-bar {
+  position: fixed;   
+  top: 0;            
+  left: 0;           
+  width: 100%;       
+  z-index: 1000;     
+  padding: 10px 0;   
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  display: inline-block; 
+  padding: 10px 20px; 
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+  background-color: transparent; 
+  border: none; 
+  color: #2E8B57; 
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.link:hover {
+  color: #2E8B57;
+  transform: scale(1.1);
+}
+
+.top-btn-position {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.top-btn-styling {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+}
+
+.top-btn-styling:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Moves the text to the bottom */
+  align-items: center; /* Aligns text to the center horizontally */
+  flex: 1;
+  text-align: center;
+  padding-top: 100px;
+}
+
+
+h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 100px; 
+  color: #2E8B57; 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+}
+
+h2, h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 60px;
+  padding-top: 70px;
+  color: #2E8B57; 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 30;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the start of the container */
+  margin: 40px auto; /* Centers the container */
+}
+
+.profilePic {
+  margin-left: 100px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column; /* Change to column to stack items */
+  justify-content: center;
+  align-items: center;
+  background-color: #B9F3E4;
+  border-radius: 8px;  
+}
+
+.profilePic img {
+  width: 400px; 
+  height: auto; 
+}
+
+.art {
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; 
+}
+
+.about-me-section {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;             
+  padding: 20px;           
+  text-align: left;         
+  line-height: 1.6;          
+  border-radius: 8px;       
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font-size: 23px;
+  background-color: #CDFCF6;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 20px 50px;
+  gap: 40px; 
+  position: relative;
+  min-height:100vh; 
+}
+
+.top-projects, .bottom-projects {
+  display: flex;
+  gap: 20px; 
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  width: 100%; 
+}
+
+.bottom-projects {
+  margin-top: 40px; /* Add space above the bottom projects */
+}
+
+.grocery-screenshot, .kanban-screenshot, .flavour-finder-screenshot, .react-blog-screenshot {
+  width: 30%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: transform .2s;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  object-fit: cover;
+}
+
+.grocery-screenshot:hover, .kanban-screenshot:hover, .flavour-finder-screenshot:hover, .react-blog-screenshot:hover {
+  transform: scale(1.2);
+}
+
+.video-container, .kanban-video-container, .flavour-finder-video, .react-blog-video {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px; 
+}
+
+.click-instruction {
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; 
+}
+
+form {
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 25px 30px;
+  border-radius: 10%;
+  box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+  color: #333;
+  margin: 25px 0; 
+  margin-left: 60px; 
+}
+
+form .input-box {
+  margin-top: 20px;
+}
+
+.input-box .field-box {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #ddd;
+  outline: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.input-box .field-box.big {
+  height: 200px;
+  resize: none;
+}
+
+form button {
+  font-family: "Quicksand", sans-serif;
+  color: #2E8B57;
+  width: 100%;
+  height: 55px;
+  background: #B9F3E4;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500px;
+  margin-top: 25px;
+  transition: .5s;
+}
+
+form button:hover {
+  background: #CDFCF6;
+}
+
+.contact {
+  background-color: #B9F3E4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.form-container, .social-links-container {
+    flex: 1;
+    margin: 10px;
+}
+
+.form-container {
+    max-width: 40%; 
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-links-icons {
+  display: flex; 
+  gap: 60px; 
+}
+
+.social-links-icons svg {
+  cursor: pointer;
+}
+
+.github-icon {
+  color: black;
+}
+
+.linkedin-icon {
+  color: #0A66C2;
+}
+
+.github-icon:hover,
+.linkedin-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.email-error {
+  color: #FF204E;
+}
+
+
