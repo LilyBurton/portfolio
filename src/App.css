@@ -126,7 +126,8 @@ h2, h3 {
 .container {
   display: flex;
   align-items: flex-start; /* Aligns items at the start of the container */
-  margin: 40px auto; /* Centers the container */
+  margin-left: 40px;
+
 }
 
 .profilePic {
@@ -143,14 +144,6 @@ h2, h3 {
 .profilePic img {
   width: 400px; 
   height: auto; 
-}
-
-.art {
-  font-size: 18px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 10px; 
 }
 
 .about-me-section {
