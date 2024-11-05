@@ -8,10 +8,10 @@
 }
 
 .nav-bar {
-  display: flex; /* Use flexbox to arrange items */
-  justify-content: flex-end; /* Push items to the right */
-  align-items: center; /* Center items vertically if needed */
-  padding: 10px 30px; /* Add some padding for spacing */
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  padding: 30px; 
 }
 
 .tiger-lillie {
@@ -46,9 +46,9 @@
   position: fixed;   
   top: 0;            
   left: 0;           
-  width: 100%;       
+  width: 99%;       
   z-index: 1000;     
-  padding: 10px 0;   
+  padding: 10px;   
 }
 
 .link {
