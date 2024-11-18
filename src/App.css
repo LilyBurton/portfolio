@@ -237,7 +237,7 @@ form {
   width: 100%;
   background: #fff;
   padding: 25px 25px 30px;
-  border-radius: 10%;
+  border-radius: 5%;
   box-shadow: 0 0 10px rgb(0, 0, 0, .1);
   color: #333;
   margin: 25px 0; 
@@ -335,6 +335,42 @@ form button:hover {
 
 .email-error {
   color: #FF204E;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 40px;
+  }
+
+  h1 {
+    font-size: 80px; 
+  }
+
+  h2, h3 {
+    font-size: 40px;
+  }
+
+  .tiger-lillie, .tiger-lillie01 {
+    width: 200px;
+    margin: 50px auto;
+  }
+
+  .text-container {
+    padding: 20px 10px;
+  }
+
+  .profilePic img {
+    width: 350px;
+  }
+
+  .about-me-section {
+    width: 550px;
+    font-size: 14px;
+  }
+
+
 }
 
 
